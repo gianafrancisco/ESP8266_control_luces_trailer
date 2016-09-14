@@ -1,5 +1,6 @@
 package fransis.homecontrol;
 
+import retrofit2.Call;
 import retrofit2.http.GET;
 
 /**
@@ -7,11 +8,11 @@ import retrofit2.http.GET;
  */
 public interface ArduinoService {
     @GET("on")
-    String frenosOn();
+    Call<String> frenosOn();
     @GET("off")
-    String frenosOff();
+    Call<String> frenosOff();
     @GET("balizas/on")
-    String balizasOn();
+    Call<String> balizasOn();
     @GET("balizas/off")
-    String balizasOff();
+    Call<String> balizasOff();
 }
